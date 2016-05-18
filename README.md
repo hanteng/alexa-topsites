@@ -16,34 +16,21 @@ python topsites.py COUNTRY-CODE TOP-N
 
 Example
 ```
-./topsites.py ZA 25
+./python topsites.py MM 500 > MM.tsv
 ```
 
 Output
+MM.tsv
 ```
-1 google.co.za
-2 google.com
-3 facebook.com
-4 youtube.com
-5 yahoo.com
-6 wikipedia.org
-7 gumtree.co.za
-8 bidorbuy.co.za
-9 linkedin.com
-10 news24.com
-11 fnb.co.za
-12 twitter.com
-13 blogspot.com
-14 amazon.com
-15 standardbank.co.za
-16 pinterest.com
-17 ask.com
-18 absa.co.za
-19 live.com
-20 wordpress.com
-21 iol.co.za
-22 imdb.com
-23 olx.co.za
-24 kickass.to
-25 junkmail.co.za
+MM	1	Google.com
+MM	2	Facebook.com
+MM	3	Google.com.mm
+MM	4	Youtube.com
+MM	5	Wikipedia.org
+MM	6	Amazon.com
+MM	7	Blogspot.com
+MM	8	Pcloud.com
+MM	9	Channelmyanmar.com
+....
+MM	500	3dcreature.com
 ```

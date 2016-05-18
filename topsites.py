@@ -14,7 +14,7 @@ if __name__ == '__main__':
     
     country_code = sys.argv[1].upper()
     number = int(sys.argv[2])
-    delimiter = ' '
+    delimiter = '\t'
 
     page_numbers = int(ceil(number/25.0))
 
@@ -28,4 +28,4 @@ if __name__ == '__main__':
             items = bullet.find_all('div')
             rank = items[0].get_text().strip()
             site = items[1].p.get_text().strip()
-            print('%s%s%s' % (rank, delimiter, site))
+            print('{c}{d}{r}{d}{s}'.format(c=country_code, r=rank, d=delimiter, s=site))
