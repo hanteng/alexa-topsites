@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from __future__ import print_function
-# python topsites_list_countries.py topsits_list_countries.tsv
+# python topsites_list_countries.py topsites_list_countries.tsv
 from bs4 import BeautifulSoup
 import requests
 import sys
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 #debug '''
 
 #def exe_script(): #debug
-#file_name = "topsits_list_countries.tsv" #debug
+#file_name = "topsites_list_countries.tsv" #debug
 
     with codecs.open(file_name, "w", "utf-8") as f:
         now = datetime.datetime.now()
