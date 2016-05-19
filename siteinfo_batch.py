@@ -28,4 +28,4 @@ if __name__ == '__main__':
                 c_code = ''
                 p_visitor = ''
             if c_code != '' and p_visitor != '':
-                print ('{s}{d}{c}{d}{p}'.format(s=site_name, c=c_code, d=delimiter, p=p_visitor))
+                print (delimiter.join([site_name, c_code, p_visitor]))

@@ -44,6 +44,6 @@ if __name__ == '__main__':
                     c_name = ''
 
                 if c_code != '' and c_name != '':
-                    print ('{c}{d}{n}{d}{t}'.format(c=c_code, n=c_name, t=now_prn, d=delimiter), file=f)
+                    print (delimiter.join([c_code, c_name, now_prn]), file=f)
 
 #exe_script() #debug    

@@ -26,10 +26,10 @@ if __name__ == '__main__':
 
     with codecs.open(file_name, "w", "utf-8") as f:
         for page_num in range(0, page_numbers): 
+            response = requests.get(BASE_URL % (page_num, country_code))  
             now = datetime.datetime.now()
             now_prn = now.isoformat()
-            response = requests.get(BASE_URL % (page_num, country_code))  
-        
+            
             soup = BeautifulSoup(response.text, 'lxml')
             bullets = soup.find_all('li', {'class':'site-listing'})
         
@@ -37,4 +37,5 @@ if __name__ == '__main__':
                 items = bullet.find_all('div')
                 rank = items[0].get_text().strip()
                 site = items[1].p.get_text().strip()
-                print('{c}{d}{r}{d}{s}{d}{t}'.format(c=country_code, r=rank, d=delimiter, s=site, t=now_prn), file=f)
+                print (delimiter.join([country_code, rank, site, now_prn]), file=f)
+
