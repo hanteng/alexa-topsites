@@ -16,7 +16,7 @@ python topsites.py COUNTRY-CODE TOP-N
 
 Example
 ```
-./python topsites.py MM 500 > MM.tsv
+./python topsites.py MM 500 MM.tsv
 ```
 
 Output
